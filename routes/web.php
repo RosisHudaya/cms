@@ -36,6 +36,51 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/', [PageController::class, 'about']);
 // Route::get('/', [PageController::class, 'articles']);
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+// PRAKTIKUM 3
+Route::get('/', function () {
+    echo "Selamat Datang";
+});
+
+Route::prefix('category') -> group(function () {
+    Route::get("/marbel-edu-games", function () {
+        echo "Halaman Marbel Edu Games";
+    });
+    Route::get("/marbel-and-friends-kids-games", function () {
+        echo "Halaman Marbel and Friends Kids Games";
+    });
+    Route::get("/riri-story-books", function () {
+        echo "Halaman Riri Stroy Books";
+    });
+    Route::get("/kolak-kids-songs", function () {
+        echo "Halaman Kolak Kids Songs";
+    });
+});
+
+Route::prefix('news') -> group(function () {
+    Route::get("", function () {
+        echo "Halaman NEWS";
+    });
+    Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
+        echo "Halaman Studio Berbagi Untuk Warga Sekitar Terdampak COVID-19";
+    });
+});
+
+Route::prefix('program') -> group(function () {
+    Route::get("/karir" , function () {
+        echo "Halamn Karir";
+    });
+    Route::get("/magang" , function () {
+        echo "Halaman Magang";
+    });
+    Route::get("/kunjungan-industri" , function () {
+        echo "Halaman Kunjungan Industri";
+    });
+});
+
+Route::get("/about-us" , function () {
+    echo "SEJARAH KAMI";
+});
