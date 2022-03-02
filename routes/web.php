@@ -41,46 +41,65 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // PRAKTIKUM 3
-Route::get('/', function () {
-    echo "Selamat Datang";
+// Route::get('/', function () {
+//     echo "Selamat Datang";
+// });
+
+// Route::prefix('category') -> group(function () {
+//     Route::get("/marbel-edu-games", function () {
+//         echo "Halaman Marbel Edu Games";
+//     });
+//     Route::get("/marbel-and-friends-kids-games", function () {
+//         echo "Halaman Marbel and Friends Kids Games";
+//     });
+//     Route::get("/riri-story-books", function () {
+//         echo "Halaman Riri Stroy Books";
+//     });
+//     Route::get("/kolak-kids-songs", function () {
+//         echo "Halaman Kolak Kids Songs";
+//     });
+// });
+
+// Route::prefix('news') -> group(function () {
+//     Route::get("", function () {
+//         echo "Halaman NEWS";
+//     });
+//     Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
+//         echo "Halaman Studio Berbagi Untuk Warga Sekitar Terdampak COVID-19";
+//     });
+// });
+
+// Route::prefix('program') -> group(function () {
+//     Route::get("/karir" , function () {
+//         echo "Halamn Karir";
+//     });
+//     Route::get("/magang" , function () {
+//         echo "Halaman Magang";
+//     });
+//     Route::get("/kunjungan-industri" , function () {
+//         echo "Halaman Kunjungan Industri";
+//     });
+// });
+
+// Route::get("/about-us" , function () {
+//     echo "SEJARAH KAMI";
+// });
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', function(){
+    return view('home');
 });
 
-Route::prefix('category') -> group(function () {
-    Route::get("/marbel-edu-games", function () {
-        echo "Halaman Marbel Edu Games";
-    });
-    Route::get("/marbel-and-friends-kids-games", function () {
-        echo "Halaman Marbel and Friends Kids Games";
-    });
-    Route::get("/riri-story-books", function () {
-        echo "Halaman Riri Stroy Books";
-    });
-    Route::get("/kolak-kids-songs", function () {
-        echo "Halaman Kolak Kids Songs";
-    });
+Route::get('/catalogs', function(){
+    return view('catalog');
 });
 
-Route::prefix('news') -> group(function () {
-    Route::get("", function () {
-        echo "Halaman NEWS";
-    });
-    Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
-        echo "Halaman Studio Berbagi Untuk Warga Sekitar Terdampak COVID-19";
-    });
+Route::get('/our-team', function(){
+    return view('team');
 });
 
-Route::prefix('program') -> group(function () {
-    Route::get("/karir" , function () {
-        echo "Halamn Karir";
-    });
-    Route::get("/magang" , function () {
-        echo "Halaman Magang";
-    });
-    Route::get("/kunjungan-industri" , function () {
-        echo "Halaman Kunjungan Industri";
-    });
-});
-
-Route::get("/about-us" , function () {
-    echo "SEJARAH KAMI";
+Route::get('/contact-us', function(){
+    return view('contact');
 });
