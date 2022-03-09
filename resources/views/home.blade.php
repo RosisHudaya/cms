@@ -12,7 +12,18 @@
                     
                     <div class="tm-gallery">
                         <div class="row">
+                        @foreach($posts as $p)
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                                <a href="preview.html">
+                                    <div class="tm-gallery-item-overlay">
+                                        <img src="{{ $p -> image }}" alt="Image" class="img-fluid tm-img-center">
+                                    </div>
+                                    
+                                    <p class="tm-figcaption">{{ $p -> name }}</p>
+                                </a>
+                            </figure>
+                        @endforeach
+                            <!-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a href="preview.html">
                                     <div class="tm-gallery-item-overlay">
                                         <img src="img/image-01.jpg" alt="Image" class="img-fluid tm-img-center">
@@ -20,8 +31,8 @@
                                     
                                     <p class="tm-figcaption">Nam vitae odio</p>
                                 </a>
-                            </figure>
-                            <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                            </figure> -->
+                            <!-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a href="preview.html">
                                     <div class="tm-gallery-item-overlay">
                                         <img src="img/image-02.jpg" alt="Image" class="img-fluid tm-img-center">
@@ -76,7 +87,7 @@
                                     </div>
                                     <p class="tm-figcaption">Vivamus facilisis</p>
                                 </a>
-                            </figure> 
+                            </figure>  -->
                         </div>   
                     </div>
                     

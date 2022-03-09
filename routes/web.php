@@ -86,20 +86,22 @@ use App\Http\Controllers\ArticleController;
 // });
 // Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', function(){
-    return view('home');
-});
+// Route::get('/', function(){
+//     return view('home');
+// });
 
-Route::get('/catalogs', function(){
-    return view('catalog');
-});
+// Route::get('/catalogs', function(){
+//     return view('catalog');
+// });
 
-Route::get('/our-team', function(){
-    return view('team');
-});
+// Route::get('/our-team', function(){
+//     return view('team');
+// });
 
-Route::get('/contact-us', function(){
-    return view('contact');
-});
+// Route::get('/contact-us', function(){
+//     return view('contact');
+// });
+
+// Route::get('/', 'HomeController@index');
