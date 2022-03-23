@@ -86,7 +86,7 @@ use App\Http\Controllers\ArticleController;
 // });
 // Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::get('/', function(){
 //     return view('home');
@@ -105,3 +105,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // });
 
 // Route::get('/', 'HomeController@index');
+
+// PRAKTIKUM 6
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
