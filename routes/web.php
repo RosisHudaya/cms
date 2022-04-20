@@ -17,9 +17,9 @@ use App\Http\Controllers\ArticleController;
 */
 // PRAKTIKUM 1
 
-// Route::get('/', function () {
-//     echo "Hi! Selamat Datang di Website Laravel";
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/about', function () {
 //     echo "Nama  : Rosis Hudaya <br>";
@@ -110,3 +110,5 @@ use App\Http\Controllers\ArticleController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('articles', ArticleController::class);
